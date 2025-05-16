@@ -146,4 +146,4 @@ Ideas for contribution:
 - Expanding documentation.
 
 ## License
-Musgo is open-source software licensed under the MIT License. (Ensure you have a LICENSE file with the MIT license text)
+Musgo is open-source software licensed under the MIT License.
