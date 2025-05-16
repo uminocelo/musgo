@@ -136,6 +136,3 @@ Ideas for contribution:
 - Adding more data-* attribute styling options.
 - Refining existing element styles.
 - Expanding documentation.
-
-## License
-Musgo is open-source software licensed under the MIT License.
