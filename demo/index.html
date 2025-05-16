@@ -5,11 +5,10 @@
   <title>Musgo CSS Demo (v0.0.2)</title>
   <link rel="stylesheet" href="../css/musgo.css">
   <style>
-      /* Additional styles for demo page layout if needed, not part of Musgo itself */
       .demo-section {
           margin-bottom: 3rem;
           padding: 1.5rem;
-          border: 1px dashed var(--musgo-border-color); /* Use variable for consistency */
+          border: 1px dashed var(--musgo-border-color);
           border-radius: 8px;
           transition: border-color 0.3s ease;
       }
@@ -17,23 +16,23 @@
           position: fixed;
           top: 10px;
           right: 10px;
-          padding: 10px 12px; /* Slightly more padding */
-          background: var(--musgo-secondary-bg-color); /* Use variable */
-          border: 1px solid var(--musgo-border-color); /* Use variable */
-          border-radius: 6px; /* Consistent rounding */
-          z-index: 1000; /* Ensure it's on top */
+          padding: 10px 12px;
+          background: var(--musgo-secondary-bg-color);
+          border: 1px solid var(--musgo-border-color);
+          border-radius: 6px;
+          z-index: 1000;
           box-shadow: 0 2px 5px rgba(0,0,0,0.1);
           transition: background-color 0.3s ease, border-color 0.3s ease;
       }
       .theme-switcher label {
           margin-right: 8px;
-          font-weight: normal; /* Label doesn't need to be bold here */
-          color: var(--musgo-text-color); /* Use variable */
+          font-weight: normal;
+          color: var(--musgo-text-color);
       }
       .theme-switcher select {
-          padding: 0.3em 0.5em; /* Smaller padding for select in switcher */
-          max-width: 100px; /* Limit width */
-          margin-bottom: 0; /* Remove bottom margin */
+          padding: 0.3em 0.5em;
+          max-width: 100px;
+          margin-bottom: 0;
       }
   </style>
 </head>
