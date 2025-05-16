@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musgo Block Grid Demo</title>
+    <link rel="stylesheet" href="../css/musgo.css"> 
+    <link rel="stylesheet" href="../css/musgo-block-grid.css">
+
+    <style>
+        body { 
+          background-color: var(--musgo-bg-color, #fff);
+          color: var(--musgo-text-color, #053300); 
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+        }
+
+        [data-musgo-container] {
+          margin-bottom: 2rem;
+        }
+
+        [data-musgo-row] > [data-musgo-block],
+        [data-musgo-row] > [data-musgo-block-sm],
+        [data-musgo-row] > [data-musgo-block-md],
+        [data-musgo-row] > [data-musgo-block-lg],
+        [data-musgo-row] > [data-musgo-block-xl] {
+          background-color: rgba(17, 171, 0, 0.08); 
+          border: 1px solid rgba(17, 171, 0, 0.25);
+          padding-top: .75rem;
+          padding-bottom: .75rem;
+          text-align: center;
+          margin-bottom: 1rem; 
+          color: var(--musgo-text-color, #053300);
+        }
+
+        h2, h3 {
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+          color: var(--musgo-text-color, #053300);
+        }
+
+        .demo-note {
+          background-color: var(--musgo-secondary-bg-color, #e6f7e5);
+          padding: 1rem;
+          border-radius: 4px;
+          margin-bottom: 1rem;
+          font-size: 0.9em;
+          border: 1px solid var(--musgo-border-color, #a4c7a0);
+        }
+    </style>
+</head>
+<body data-theme="light"> <div data-musgo-container>
+        <header>
+            <h1>Musgo Block Grid Demo</h1>
+            <p class="demo-note">This page demonstrates the <code>musgo-block-grid.css</code> system using <code>data-*</code> attributes. Resize your browser window to see responsive behavior.</p>
+        </header>
+
+        <h2>Basic Block Layouts</h2>
+        <div data-musgo-row>
+            <div data-musgo-block="4">Block 4 (12 cols)</div>
+        </div>
+        <div data-musgo-row>
+            <div data-musgo-block="2">Block 2 (6 cols)</div>
+            <div data-musgo-block="2">Block 2 (6 cols)</div>
+        </div>
+        <div data-musgo-row>
+            <div data-musgo-block="1">Block 1 (3 cols)</div>
+            <div data-musgo-block="1">Block 1 (3 cols)</div>
+            <div data-musgo-block="1">Block 1 (3 cols)</div>
+            <div data-musgo-block="1">Block 1 (3 cols)</div>
+        </div>
+        <div data-musgo-row>
+            <div data-musgo-block="0">B0 (1)</div>
+            <div data-musgo-block="0">B0 (1)</div>
+            <div data-musgo-block="0">B0 (1)</div>
+            <div data-musgo-block="0">B0 (1)</div>
+            <div data-musgo-block="0">B0 (1)</div>
+            <div data-musgo-block="0">B0 (1)</div>
+            <div data-musgo-block="0">B0 (1)</div>
+            <div data-musgo-block="0">B0 (1)</div>
+            <div data-musgo-block="0">B0 (1)</div>
+            <div data-musgo-block="0">B0 (1)</div>
+            <div data-musgo-block="0">B0 (1)</div>
+            <div data-musgo-block="0">B0 (1)</div>
+        </div>
+        <div data-musgo-row>
+            <div data-musgo-block="3">Block 3 (9 cols)</div>
+            <div data-musgo-block="1">Block 1 (3 cols)</div>
+        </div>
+        <div data-musgo-row>
+            <div data-musgo-block="">Auto Block</div>
+            <div data-musgo-block="">Auto Block</div>
+            <div data-musgo-block="">Auto Block</div>
+        </div>
+
+        <h2>Responsive Block Layouts</h2>
+        <p class="demo-note">These blocks stack on extra-small screens by default and adjust at different breakpoints.</p>
+        <div data-musgo-row>
+            <div data-musgo-block-sm="2" data-musgo-block-md="1">XS:Full, SM:Block 2, MD:Block 1</div>
+            <div data-musgo-block-sm="2" data-musgo-block-md="1">XS:Full, SM:Block 2, MD:Block 1</div>
+            <div data-musgo-block-sm="2" data-musgo-block-md="1">XS:Full, SM:Block 2, MD:Block 1</div>
+            <div data-musgo-block-sm="2" data-musgo-block-md="1">XS:Full, SM:Block 2, MD:Block 1</div>
+        </div>
+        <div data-musgo-row>
+            <div data-musgo-block-md="3">XS:Full, MD:Block 3 (9 cols)</div>
+            <div data-musgo-block-md="1">XS:Full, MD:Block 1 (3 cols)</div>
+        </div>
+
+        <h2>No Gutters</h2>
+        <p class="demo-note">Use <code>data-musgo-gutters="none"</code> on the row.</p>
+        <div data-musgo-row data-musgo-gutters="none">
+            <div data-musgo-block="2">Block 2 (No Gutters)</div>
+            <div data-musgo-block="2">Block 2 (No Gutters)</div>
+        </div>
+
+        <h2>Alignment</h2>
+        <h3>Vertical Alignment (on row)</h3>
+        <div data-musgo-row data-musgo-align-items="center" style="min-height: 100px; background: var(--musgo-tertiary-bg-color, #f0f0f0);">
+            <div data-musgo-block="1">Align Center</div>
+            <div data-musgo-block="1">Block 1</div>
+            <div data-musgo-block="1">One<br>Two<br>Three</div>
+        </div>
+        <h3>Horizontal Alignment (on row)</h3>
+        <div data-musgo-row data-musgo-justify-content="around">
+            <div data-musgo-block="1">Block 1</div>
+            <div data-musgo-block="1">Justify Around</div>
+            <div data-musgo-block="1">Block 1</div>
+        </div>
+        <h3>Self Alignment (on block)</h3>
+        <div data-musgo-row style="min-height: 120px; background: var(--musgo-tertiary-bg-color, #f0f0f0);">
+            <div data-musgo-block="1" data-musgo-align-self="start">Self Start</div>
+            <div data-musgo-block="1" data-musgo-align-self="center">Self Center</div>
+            <div data-musgo-block="1" data-musgo-align-self="end">Self End</div>
+            <div data-musgo-block="1" data-musgo-align-self="stretch">Self Stretch (default if row has height)</div>
+        </div>
+
+
+        <h2>Offsets (Example)</h2>
+        <div data-musgo-row>
+            <div data-musgo-block="1" data-musgo-offset-sm="1">Block 1, Offset by Block 1 on SM+</div>
+        </div>
+         <div data-musgo-row>
+            <div data-musgo-block="2">Block 2</div>
+            <div data-musgo-block="1" data-musgo-offset="1">Block 1, Offset by Block 1 (3 cols)</div>
+        </div>
+
+
+    </div> <div data-musgo-container="fluid">
+        <h2>Fluid Container</h2>
+        <div data-musgo-row>
+            <div data-musgo-block-sm="2">Block 2 (6 cols on SM+)</div>
+            <div data-musgo-block-sm="2">Block 2 (6 cols on SM+)</div>
+        </div>
+    </div>
+
+</body>
+</html>
