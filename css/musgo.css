@@ -1,109 +1,89 @@
 :root {
-  --musgo-primary-color: #11AB00;
-  --musgo-primary-hover-color: #0E8A00;
-  --musgo-primary-text-color: #FFFFFF;
-
-  --musgo-text-color: #212529;
-  --musgo-bg-color: #ffffff;
-  --musgo-secondary-bg-color: #f8f9fa;
-  --musgo-tertiary-bg-color: #e9ecef;
-
+  --musgo-primary-color: #11AB00; 
+  --musgo-primary-hover-color: #0e8e00; 
+  --musgo-primary-text-color: #ffffff; 
+  --musgo-text-color: #053300; 
+  --musgo-blockquote-text-color: #042900; 
+  --musgo-code-text-color: #053300; 
+  --musgo-legend-text-color: #042900; 
+  --musgo-bg-color: #ffffff; 
+  --musgo-secondary-bg-color: #e6f7e5; 
+  --musgo-tertiary-bg-color: #d9f0d7; 
+  --musgo-border-color: #a4c7a0; 
+  --musgo-strong-border-color: #82b37d; 
+  --musgo-pre-border-color: var(--musgo-border-color);
+  --musgo-blockquote-border-color: var(--musgo-border-color);
+  --musgo-table-border-color: var(--musgo-border-color);
+  --musgo-details-border-color: var(--musgo-border-color);
   --musgo-link-color: var(--musgo-primary-color);
   --musgo-link-hover-color: var(--musgo-primary-hover-color);
-
-  --musgo-border-color: #dee2e6;
-  --musgo-strong-border-color: #adb5bd;
-
-  --musgo-code-bg-color: var(--musgo-secondary-bg-color);
-  --musgo-code-text-color: #343a40;
-  --musgo-pre-border-color: var(--musgo-border-color);
-
-  --musgo-blockquote-border-color: var(--musgo-border-color);
-  --musgo-blockquote-text-color: #495057;
-
-  --musgo-table-border-color: var(--musgo-border-color);
-  --musgo-table-header-bg-color: var(--musgo-secondary-bg-color);
-  --musgo-table-even-row-bg-color: var(--musgo-secondary-bg-color);
-
-  --musgo-form-bg-color: var(--musgo-bg-color);
-  --musgo-form-text-color: var(--musgo-text-color);
-  --musgo-form-border-color: #ced4da;
-  --musgo-form-focus-border-color: var(--musgo-primary-color);
-  --musgo-form-disabled-bg-color: var(--musgo-tertiary-bg-color);
-  --musgo-form-disabled-text-color: #6c757d;
-  --musgo-form-disabled-border-color: var(--musgo-border-color);
-
+  --musgo-form-bg-color: var(--musgo-bg-color); 
+  --musgo-form-text-color: var(--musgo-text-color); 
+  --musgo-form-border-color: #053300; 
+  --musgo-form-focus-border-color: var(--musgo-primary-color); 
+  --musgo-primary-color-alpha: rgba(17, 171, 0, 0.25); 
+  --musgo-form-disabled-bg-color: #e9ecef; 
+  --musgo-form-disabled-text-color: #6c757d; 
+  --musgo-form-disabled-border-color: #ced4da; 
   --musgo-button-bg-color: var(--musgo-primary-color);
   --musgo-button-text-color: var(--musgo-primary-text-color);
   --musgo-button-border-color: var(--musgo-primary-color);
   --musgo-button-hover-bg-color: var(--musgo-primary-hover-color);
   --musgo-button-hover-border-color: var(--musgo-primary-hover-color);
-
   --musgo-button-outline-text-color: var(--musgo-primary-color);
   --musgo-button-outline-border-color: var(--musgo-primary-color);
   --musgo-button-outline-hover-bg-color: var(--musgo-primary-color);
   --musgo-button-outline-hover-text-color: var(--musgo-primary-text-color);
-
-  --musgo-details-bg-color: var(--musgo-secondary-bg-color);
-  --musgo-details-border-color: var(--musgo-border-color);
-
+  --musgo-table-header-bg-color: var(--musgo-secondary-bg-color);
+  --musgo-table-even-row-bg-color: var(--musgo-secondary-bg-color);
   --musgo-invalid-border-color: #dc3545;
   --musgo-invalid-bg-color: #f8d7da;
   --musgo-invalid-text-color: #721c24;
+  --musgo-invalid-border-color-alpha: rgba(220, 53, 69, 0.25);
 }
 
 [data-theme="dark"] {
-  --musgo-primary-color: #11AB00;
-  --musgo-primary-hover-color: #15cc00;
-  --musgo-primary-text-color: #ffffff;
-
-  --musgo-text-color: #e9ecef;
-  --musgo-bg-color: #121212;
-  --musgo-secondary-bg-color: #1e1e1e;
-  --musgo-tertiary-bg-color: #2a2a2a;
-
+  --musgo-primary-color: #11AB00; 
+  --musgo-primary-hover-color: #15cc00; 
+  --musgo-primary-text-color: #ffffff; 
+  --musgo-text-color: #B7E5B2; 
+  --musgo-blockquote-text-color: #d1f3ce; 
+  --musgo-code-text-color: #B7E5B2; 
+  --musgo-legend-text-color: #d1f3ce; 
+  --musgo-bg-color: #000000; 
+  --musgo-secondary-bg-color: #0a1f08; 
+  --musgo-tertiary-bg-color: #0f2e0c; 
+  --musgo-border-color: #385e34; 
+  --musgo-strong-border-color: #4a7d45; 
+  --musgo-pre-border-color: var(--musgo-border-color);
+  --musgo-blockquote-border-color: var(--musgo-border-color);
+  --musgo-table-border-color: var(--musgo-border-color);
+  --musgo-details-border-color: var(--musgo-border-color);
   --musgo-link-color: var(--musgo-primary-color);
   --musgo-link-hover-color: var(--musgo-primary-hover-color);
-
-  --musgo-border-color: #3a3a3a;
-  --musgo-strong-border-color: #4a4a4a;
-
-  --musgo-code-bg-color: var(--musgo-secondary-bg-color);
-  --musgo-code-text-color: var(--musgo-text-color);
-  --musgo-pre-border-color: var(--musgo-border-color);
-
-  --musgo-blockquote-border-color: var(--musgo-border-color);
-  --musgo-blockquote-text-color: #adb5bd;
-
-  --musgo-table-border-color: var(--musgo-border-color);
-  --musgo-table-header-bg-color: var(--musgo-secondary-bg-color);
-  --musgo-table-even-row-bg-color: var(--musgo-secondary-bg-color);
-
-  --musgo-form-bg-color: var(--musgo-secondary-bg-color);
-  --musgo-form-text-color: var(--musgo-text-color);
-  --musgo-form-border-color: #495057;
-  --musgo-form-focus-border-color: var(--musgo-primary-color);
-  --musgo-form-disabled-bg-color: var(--musgo-tertiary-bg-color);
-  --musgo-form-disabled-text-color: #6c757d;
-  --musgo-form-disabled-border-color: var(--musgo-border-color);
-
+  --musgo-form-bg-color: var(--musgo-secondary-bg-color); 
+  --musgo-form-text-color: var(--musgo-text-color); 
+  --musgo-form-border-color: #B7E5B2; 
+  --musgo-form-focus-border-color: var(--musgo-primary-color); 
+  --musgo-primary-color-alpha: rgba(17, 171, 0, 0.35); 
+  --musgo-form-disabled-bg-color: #2a2a2a; 
+  --musgo-form-disabled-text-color: #6c757d; 
+  --musgo-form-disabled-border-color: #444; 
   --musgo-button-bg-color: var(--musgo-primary-color);
   --musgo-button-text-color: var(--musgo-primary-text-color);
   --musgo-button-border-color: var(--musgo-primary-color);
   --musgo-button-hover-bg-color: var(--musgo-primary-hover-color);
   --musgo-button-hover-border-color: var(--musgo-primary-hover-color);
-
   --musgo-button-outline-text-color: var(--musgo-primary-color);
   --musgo-button-outline-border-color: var(--musgo-primary-color);
   --musgo-button-outline-hover-bg-color: var(--musgo-primary-color);
-  --musgo-button-outline-hover-text-color: #121212;
-
-  --musgo-details-bg-color: var(--musgo-secondary-bg-color);
-  --musgo-details-border-color: var(--musgo-border-color);
-
-  --musgo-invalid-border-color: #f5c6cb;
-  --musgo-invalid-bg-color: #582123;
-  --musgo-invalid-text-color: #f5c6cb;
+  --musgo-button-outline-hover-text-color: #000000; 
+  --musgo-table-header-bg-color: var(--musgo-secondary-bg-color);
+  --musgo-table-even-row-bg-color: var(--musgo-secondary-bg-color);
+  --musgo-invalid-border-color: #f5c6cb; 
+  --musgo-invalid-bg-color: #582123; 
+  --musgo-invalid-text-color: #f5c6cb; 
+  --musgo-invalid-border-color-alpha: rgba(245, 198, 203, 0.35);
 }
 
 *,
@@ -121,7 +101,7 @@ body {
   background-color: var(--musgo-bg-color);
   padding: 1rem;
   font-size: 16px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 html {
@@ -135,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
   font-weight: 600;
   line-height: 1.2;
-  color: var(--musgo-text-color);
+  color: var(--musgo-text-color); 
 }
 
 h1 { font-size: 2.5em; }
@@ -161,26 +141,27 @@ a:hover, a:focus {
 
 strong, b {
   font-weight: bold;
+  color: var(--musgo-text-color); 
 }
 
 em, i {
   font-style: italic;
 }
 
-code, kbd, samp {
+code, kbd, samp { 
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 0.9em;
-  background-color: var(--musgo-code-bg-color);
+  background-color: var(--musgo-secondary-bg-color); 
   color: var(--musgo-code-text-color);
   padding: 0.2em 0.4em;
   border-radius: 3px;
   border: 1px solid var(--musgo-pre-border-color);
 }
 
-pre {
+pre { 
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 0.9em;
-  background-color: var(--musgo-code-bg-color);
+  background-color: var(--musgo-secondary-bg-color); 
   color: var(--musgo-code-text-color);
   padding: 1em;
   overflow-x: auto;
@@ -188,7 +169,7 @@ pre {
   border-radius: 4px;
   margin-bottom: 1em;
 }
-pre code {
+pre code { 
     background-color: transparent;
     color: inherit;
     border: none;
@@ -230,6 +211,7 @@ dd {
   margin-bottom: 0.5em;
 }
 
+
 input,
 button,
 select,
@@ -245,7 +227,7 @@ textarea {
   max-width: 400px;
   background-color: var(--musgo-form-bg-color);
   color: var(--musgo-form-text-color);
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 
 input:focus,
@@ -253,11 +235,8 @@ select:focus,
 textarea:focus {
   border-color: var(--musgo-form-focus-border-color);
   outline: 0;
-  box-shadow: 0 0 0 0.2rem var(--musgo-primary-color-alpha, rgba(17, 171, 0, 0.25));
+  box-shadow: 0 0 0 0.2rem var(--musgo-primary-color-alpha);
 }
-
-:root { --musgo-primary-color-alpha: rgba(17, 171, 0, 0.25); }
-[data-theme="dark"] { --musgo-primary-color-alpha: rgba(17, 171, 0, 0.35); }
 
 
 input[type="checkbox"],
@@ -272,6 +251,7 @@ label {
   display: block;
   margin-bottom: 0.25em;
   font-weight: 500;
+  color: var(--musgo-text-color);
 }
 
 button,
@@ -317,10 +297,10 @@ fieldset {
 legend {
   font-weight: bold;
   padding: 0 0.5em;
-  color: var(--musgo-text-color);
+  color: var(--musgo-legend-text-color);
 }
 
-/* --- Tables --- */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -357,13 +337,13 @@ figure {
 
 figcaption {
   font-size: 0.9em;
-  color: var(--musgo-blockquote-text-color);
+  color: var(--musgo-blockquote-text-color); 
   text-align: center;
   margin-top: 0.5em;
 }
 
 details {
-  background-color: var(--musgo-details-bg-color);
+  background-color: var(--musgo-secondary-bg-color); 
   border: 1px solid var(--musgo-details-border-color);
   border-radius: 4px;
   padding: 0.75em;
@@ -374,7 +354,7 @@ summary {
   font-weight: bold;
   cursor: pointer;
   padding: 0.5em;
-  margin: -0.75em -0.75em 0;
+  margin: -0.75em -0.75em 0; 
   color: var(--musgo-text-color);
 }
 summary:hover {
@@ -436,10 +416,8 @@ select[aria-invalid="true"] {
 input[aria-invalid="true"]:focus,
 textarea[aria-invalid="true"]:focus,
 select[aria-invalid="true"]:focus {
-  box-shadow: 0 0 0 0.2rem var(--musgo-invalid-border-color-alpha, rgba(220, 53, 69, 0.25));
+  box-shadow: 0 0 0 0.2rem var(--musgo-invalid-border-color-alpha);
 }
-:root { --musgo-invalid-border-color-alpha: rgba(220, 53, 69, 0.25); }
-[data-theme="dark"] { --musgo-invalid-border-color-alpha: rgba(245, 198, 203, 0.35); }
 
 
 [aria-disabled="true"] {
