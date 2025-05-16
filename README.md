@@ -53,21 +53,13 @@ Getting started with Musgo is incredibly simple.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Musgo-styled Page</title>
-        <link rel="stylesheet" href="path/to/your/css/musgo.css">
+        <link rel="stylesheet" href="css/musgo.css">
     </head>
     <body>
         <h1>Hello, Musgo!</h1>
         <p>This page is styled with Musgo CSS.</p>
     </body>
     </html>
-    ```
-
-    Replace `path/to/your/css/musgo.css` with the actual path to the file.
-
-3.  **CDN (Coming Soon - Example):**
-    *(Once you host it on a CDN, you can add this section)*
-    ```html
-    <link rel="stylesheet" href="[https://cdn.jsdelivr.net/gh/uminocelo/musgo@latest/css/musgo.css](https://cdn.jsdelivr.net/gh/uminocelo/musgo@latest/css/musgo.css)">
     ```
 
 That's it! Musgo will now apply its default styles to your HTML elements.
