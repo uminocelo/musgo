@@ -1,0 +1,23 @@
+{
+  "name": "musgo",
+  "version": "1.0.0",
+  "description": "Musgo is a classless, minimalistic CSS framework designed for simplicity and elegance.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build:sass": "sass css/scss/musgo.scss css/musgo.css && sass css/scss/musgo-block-grid.scss css/musgo-block-grid.css",
+    "build:postcss": "postcss css/musgo.css -o css/musgo.css && postcss css/musgo-block-grid.css -o css/musgo-block-grid.css",
+    "build": "npm run build:sass && npm run build:postcss"
+  },
+  "keywords": [],
+  "author": "@uminocelo",
+  "license": "MIT License",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.89.0"
+  }
+}
