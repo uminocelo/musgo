@@ -124,15 +124,3 @@ Musgo aims to support all modern web browsers that have good support for CSS Cus
 - Edge (latest)
 
 Older browsers like Internet Explorer are not supported.
-
-## Contributing
-
-Contributions are welcome! Whether it's bug reports, feature suggestions, or pull requests, your help is appreciated.
-Please read our Contributing Guidelines before submitting a pull request.
-
-Ideas for contribution:
-
-- Improving accessibility.
-- Adding more data-* attribute styling options.
-- Refining existing element styles.
-- Expanding documentation.
