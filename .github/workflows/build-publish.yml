@@ -12,6 +12,8 @@ jobs:
   build:
     name: Compile and Commit dist/
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: ⬇️ Checkout repo
@@ -38,8 +40,13 @@ jobs:
 
       - name: 📤 Commit dist files
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
+          git config --global user.name "github-actions[bot]" # It's common to append [bot]
+          git config --global user.email "github-actions[bot]@users.noreply.github.com" # Use a noreply email
           git add dist
-          git commit -m "📦 Update dist folder [skip ci]" || echo "No changes to commit"
-          git push
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "📦 Update dist folder [skip ci]"
+            git push
+          fi
