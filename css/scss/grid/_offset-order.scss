@@ -1,0 +1,22 @@
+[data-musgo-offset="1"] {
+  margin-left: calc(var(--block-2-cols) / var(--grid-total-columns) * 100%);
+}
+[data-musgo-offset="2"] {
+  margin-left: calc(var(--block-3-cols) / var(--grid-total-columns) * 100%);
+}
+
+@media (min-width: var(--breakpoint-sm)) {
+  [data-musgo-offset-sm="0"] { margin-left: 0; }
+  [data-musgo-offset-sm="1"] { margin-left: calc(var(--block-2-cols) / var(--grid-total-columns) * 100%); }
+  [data-musgo-offset-sm="2"] { margin-left: calc(var(--block-3-cols) / var(--grid-total-columns) * 100%); }
+}
+
+[data-musgo-order="first"] {
+  order: -1;
+}
+[data-musgo-order="last"] {
+  order: calc(var(--grid-total-columns) + 1);
+}
+[data-musgo-order="0"] {
+  order: 0;
+}

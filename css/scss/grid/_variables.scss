@@ -1,0 +1,15 @@
+:root {
+  --grid-total-columns: 12;
+  --grid-gutter-width: 1.5rem;
+
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  --block-1-cols: 1;
+  --block-2-cols: 3;
+  --block-3-cols: 6;
+  --block-4-cols: 9;
+  --block-5-cols: 12;
+}

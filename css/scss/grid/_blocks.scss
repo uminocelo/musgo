@@ -1,0 +1,52 @@
+$blocks: (
+  1: 1,
+  2: 3,
+  3: 6,
+  4: 9,
+  5: 12
+);
+
+@mixin generate-blocks($suffix, $media: null) {
+  @each $block, $cols in $blocks {
+    [data-musgo-block#{$suffix}="#{$block}"] {
+      flex: 0 0 calc(#{$cols} / var(--grid-total-columns) * 100%);
+      max-width: calc(#{$cols} / var(--grid-total-columns) * 100%);
+    }
+  }
+
+  [data-musgo-block#{$suffix}=""] {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
+
+// Base styles
+[data-musgo-block],
+[data-musgo-block-sm],
+[data-musgo-block-md],
+[data-musgo-block-lg],
+[data-musgo-block-xl] {
+  position: relative;
+  width: 100%;
+  padding-right: calc(var(--grid-gutter-width) / 2);
+  padding-left: calc(var(--grid-gutter-width) / 2);
+  box-sizing: border-box;
+  flex-basis: 100%;
+}
+
+@include generate-blocks("");
+
+// Responsive variants
+@media (min-width: var(--breakpoint-sm)) {
+  @include generate-blocks("-sm");
+}
+@media (min-width: var(--breakpoint-md)) {
+  @include generate-blocks("-md");
+}
+@media (min-width: var(--breakpoint-lg)) {
+  @include generate-blocks("-lg");
+}
+@media (min-width: var(--breakpoint-xl)) {
+  @include generate-blocks("-xl");
+}
