@@ -1,0 +1,36 @@
+name: "💡 Feature Request"
+description: "Suggest an enhancement for Musgo"
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing an idea to improve Musgo 🎉
+  - type: textarea
+    id: description
+    attributes:
+      label: What feature would you like?
+      description: A clear and concise description of the enhancement.
+      placeholder: "I’d love Musgo to support…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use-case / Motivation
+      description: Why is this feature useful? How would you use it?
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you’ve considered
+      description: Have you tried work-arounds or other frameworks?
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Links, screenshots, or related issues.
