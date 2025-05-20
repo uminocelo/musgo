@@ -1,0 +1,45 @@
+name: 🚀 Build SCSS and Update dist/
+
+on:
+  push:
+    paths:
+      - 'css/scss/**'
+      - '.github/workflows/build-publish.yml'
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Compile and Commit dist/
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 🔧 Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 🧱 Build CSS
+        run: npm run build
+
+      - name: 📂 Copy compiled CSS to dist/
+        run: |
+          mkdir -p dist
+          cp css/musgo.css dist/
+          cp css/musgo-block-grid.css dist/
+
+      - name: 📤 Commit dist files
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add dist
+          git commit -m "📦 Update dist folder [skip ci]" || echo "No changes to commit"
+          git push

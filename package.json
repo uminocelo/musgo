@@ -7,8 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "build:sass": "sass css/scss/musgo.scss css/musgo.css && sass css/scss/musgo-block-grid.scss css/musgo-block-grid.css",
-    "build:postcss": "postcss css/musgo.css -o css/musgo.css && postcss css/musgo-block-grid.css -o css/musgo-block-grid.css",
+    "build:sass": "sass css/scss/musgo.scss dist/musgo.css && sass css/scss/musgo-block-grid.scss dist/musgo-block-grid.css",
+    "build:postcss": "postcss dist/musgo.css -o dist/musgo.css && postcss dist/musgo-block-grid.css -o dist/musgo-block-grid.css",
     "build": "npm run build:sass && npm run build:postcss"
   },
   "keywords": [],
