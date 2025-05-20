@@ -1,126 +1,104 @@
-# Musgo CSS Framework 🌿
+<p align="center">
+  <img src="https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge&logo=github" alt="Musgo Demo Badge">
+  <img src="https://img.shields.io/github/license/uminocelo/musgo?style=for-the-badge" alt="License MIT">
+</p>
 
-**Musgo is a classless, minimalistic CSS framework designed for simplicity and elegance.**
-
-It provides sensible default styling for HTML elements, allowing you to create clean and modern-looking web pages with minimal setup and without writing custom CSS classes for basic layout and typography. Musgo embraces semantic HTML and aims to be as unobtrusive as possible.
-
-**Goals:**
-
-* **Classless:** No need to litter your HTML with utility classes for basic styling. Musgo styles raw HTML elements.
-* **Minimalistic:** Provides essential styling without being overly opinionated or bloated.
-* **Easy to Use:** Simply link the CSS file and start writing semantic HTML.
-* **Customizable:** Easily themeable using CSS custom properties (variables).
-* **No JavaScript:** Pure CSS for styling.
+<h1 align="center">🌿 Musgo</h1>
+<p align="center">A classless, block-based CSS framework for clean, responsive, semantic HTML.</p>
 
 ---
 
-## Table of Contents
+## ✨ Features
 
-* [Demo](#demo)
-* [Quick Start](#quick-start)
-* [Features](#features)
-* [Customization](#customization)
-    * [Using CSS Variables](#using-css-variables)
-    * [Dark Mode](#dark-mode)
-* [Browser Support](#browser-support)
-* [Contributing](#contributing)
-* [License](#license)
+- ✅ **Classless styling** — beautiful defaults out-of-the-box
+- ✅ **Custom grid system** using semantic `data-musgo-block` attributes
+- ✅ **Responsive design** with mobile-first breakpoints
+- ✅ **Dark mode** support with `data-theme="dark"`
+- ✅ **Accessible form elements** and validation states
+- ✅ **Built with SCSS** for maintainability and modularity
 
 ---
 
-## Demo
+## 🔗 Live Demo
 
-Check out the live demo to see Musgo in action:
+Explore the framework live:
 
-➡️ **[View Demo](https://uminocelo.github.io/musgo/demo/index.html)**
+👉 **[https://uminocelo.github.io/musgo](https://uminocelo.github.io/musgo)**
 
----
-
-## Quick Start
-
-Getting started with Musgo is incredibly simple.
-
-1.  **Download:**
-    Get the latest `musgo.css` file from the `css/` directory of this repository or from the [releases page](https://github.com/uminocelo/musgo/releases).
-
-2.  **Link in HTML:**
-    Include the `musgo.css` file in the `<head>` of your HTML document:
-
-    ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Musgo-styled Page</title>
-        <link rel="stylesheet" href="css/musgo.css">
-    </head>
-    <body>
-        <h1>Hello, Musgo!</h1>
-        <p>This page is styled with Musgo CSS.</p>
-    </body>
-    </html>
-    ```
-
-That's it! Musgo will now apply its default styles to your HTML elements.
+You’ll find a full-featured grid demo and usage examples.
 
 ---
 
-## Features
+## 📦 Installation
 
-* Sensible defaults for typography (headings, paragraphs, links, lists, code blocks, blockquotes).
-* Basic styling for forms (inputs, buttons, select, textarea, fieldset).
-* Clean table styling.
-* Responsive images and basic figure/figcaption styling.
-* Support for `<details>` and `<summary>` elements.
-* Dark mode support via `data-theme="dark"` attribute.
-* Customization through CSS variables.
-* Lightweight and fast.
-
----
-
-## Customization
-
-Musgo is designed to be easily customizable using CSS custom properties (variables).
-
-### Using CSS Variables
-
-You can override the default theme colors and other properties by redefining the CSS variables in your own stylesheet or directly in a `<style>` tag *after* linking `musgo.css`.
-
-**Core Variables (see `musgo.css` for the full list):**
-
-```css
-/* Example: Creating your own light theme variant */
-:root {
-  --musgo-primary-color: #BF5700; /* Your brand's primary color */
-  --musgo-primary-hover-color: #a34a00;
-  --musgo-text-color: #333333;
-  --musgo-bg-color: #fdfcfb;
-  --musgo-link-color: var(--musgo-primary-color);
-  /* ... and so on for other variables ... */
-}
-```
-
-Place these overrides in a <style> tag in your HTML head (after Musgo's link) or in a separate CSS file linked after `musgo.css`.
-For a detailed list of all available CSS variables and how to use them, please refer to the Customization Guide. 
-
-### Dark Mode
-
-Musgo includes a dark theme that can be activated by adding the data-theme="dark" attribute to the <body> tag or any parent container:
+Clone the repo and include the CSS files:
 
 ```html
-<body data-theme="dark">
-</body>
+<link rel="stylesheet" href="css/musgo.css">
+<link rel="stylesheet" href="css/musgo-block-grid.css">
 ```
 
-You can also toggle this attribute with JavaScript to allow users to switch themes. The dark theme variables are defined within the [data-theme="dark"] selector in musgo.css and can also be overridden.
+Or download the latest release from the [Releases page](https://github.com/uminocelo/musgo/releases).
 
-### Browser Support
+## 🚀 Quick Start Example
 
-Musgo aims to support all modern web browsers that have good support for CSS Custom Properties.
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+```html
+<div data-musgo-container>
+  <div data-musgo-row>
+    <div data-musgo-block="2">3 columns</div>
+    <div data-musgo-block="3">6 columns</div>
+    <div data-musgo-block="2">3 columns</div>
+  </div>
+</div>
+```
+Use data-musgo-block-sm, -md, -lg, -xl for responsive control.
 
-Older browsers like Internet Explorer are not supported.
+## 🛠️ Project Structure
+
+```bash
+musgo/
+├── css/
+│   ├── musgo.css                # Classless styling
+│   ├── musgo-block-grid.css     # Grid layout system
+│   └── scss/                    # Source SCSS files
+├── demo/
+│   └── index.html               # Full Musgo demo
+├── docs/
+│   └── USAGE.md                 # Detailed usage documentation
+├── README.md
+└── LICENSE
+```
+
+## 🧱 Grid System
+
+Musgo uses a 12-column grid with predefined block sizes:
+
+| Block | Columns | Percentage   | 
+|-------|---------|--------------| 
+| 1	    | 1	      |   ~8.33%     | 
+| 2	    | 3       |   25%        | 
+| 3	    | 6	      |   50%        | 
+| 4	    | 9	      |   75%        | 
+| 5	    | 12      |   100%       | 
+
+You can combine blocks and adjust responsiveness with `data-musgo-block-[breakpoint]``.
+
+## 🌗 Dark Mode
+
+Enable dark mode by setting the data-theme="dark" attribute on the <html> or <body> element:
+
+```html
+<html data-theme="dark">
+```
+
+All colors and backgrounds will adapt automatically using CSS custom properties.
+
+## 📄 License
+
+Licensed under the MIT License.
+
+## 🧑‍💻 Author
+
+Built with ❤️ by [uminocelo](https://github.com/uminocelo).
+
+📖 [Full Usage Guide →](docs/USAGE.md)

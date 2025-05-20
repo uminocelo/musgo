@@ -1,273 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Musgo CSS Demo (v0.0.2)</title>
-  <link rel="stylesheet" href="../css/musgo.css">
+  <meta charset="UTF-8" />
+  <title>Musgo CSS Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/musgo.css" />
+  <link rel="stylesheet" href="../css/musgo-block-grid.css" />
   <style>
-      .demo-section {
-          margin-bottom: 3rem;
-          padding: 1.5rem;
-          border: 1px dashed var(--musgo-border-color);
-          border-radius: 8px;
-          transition: border-color 0.3s ease;
-      }
-      .theme-switcher {
-          position: fixed;
-          top: 10px;
-          right: 10px;
-          padding: 10px 12px;
-          background: var(--musgo-secondary-bg-color);
-          border: 1px solid var(--musgo-border-color);
-          border-radius: 6px;
-          z-index: 1000;
-          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-          transition: background-color 0.3s ease, border-color 0.3s ease;
-      }
-      .theme-switcher label {
-          margin-right: 8px;
-          font-weight: normal;
-          color: var(--musgo-text-color);
-      }
-      .theme-switcher select {
-          padding: 0.3em 0.5em;
-          max-width: 100px;
-          margin-bottom: 0;
-      }
+    header, footer {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header {
+      background-color: var(--musgo-secondary-bg-color);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero {
+      margin: 2rem auto;
+      text-align: center;
+      max-width: 40rem;
+    }
+
+    .grid-example [data-musgo-row] {
+      margin-top: 2rem;
+    }
+
+    .demo-block {
+      background-color: var(--musgo-tertiary-bg-color);
+      border: 1px solid var(--musgo-strong-border-color);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    footer {
+      font-size: 0.9em;
+      color: var(--musgo-blockquote-text-color);
+    }
+
+    a.button {
+      background-color: var(--musgo-primary-color);
+      color: var(--musgo-primary-text-color);
+      padding: 0.75em 1.5em;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      text-decoration: none;
+      margin-top: 1em;
+      display: inline-block;
+    }
+
+    a.button:hover {
+      background-color: var(--musgo-primary-hover-color);
+    }
   </style>
 </head>
-<body data-theme="light">
-  <div class="theme-switcher">
-    <label for="themeToggle">Theme:</label>
-    <select id="themeToggle">
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-    </select>
-  </div>
+<body>
 
   <header>
-    <h1>Welcome to Musgo CSS Demo</h1>
-    <p>This page demonstrates the basic styling of the classless Musgo CSS framework (v0.0.2 with CSS Variables and new primary color).</p>
+    <h1>Musgo</h1>
+    <p>A classless, block-based CSS framework for simplicity and clarity.</p>
+    <a href="#get-started" class="button">Get Started</a>
   </header>
 
-  <main>
-    <section class="demo-section">
-      <h2>Typography</h2>
-      <h1>Heading 1</h1>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
-      <h4>Heading 4</h4>
-      <h5>Heading 5</h5>
-      <h6>Heading 6</h6>
-      <p>This is a paragraph of text. It includes <strong>bold text</strong>, <em>italic text</em>, and a <a href="#">link to Musgo</a>. Musgo aims to be minimalistic and rely on semantic HTML.</p>
-      <p>Another paragraph with <code>inline code example</code> and a block of preformatted text below:</p>
-      <pre>
-        <code>
-          // This is a block of code in pre
-          function greet(name) {
-          // Use the primary color for comments if desired
-          // Or just keep it simple
-          return "Hello, " + name + "!";
-          }
-        </code>
-      </pre>
-      <blockquote>
-          <p>"This is a blockquote. It's used for quoting text from another source. The new primary color is <span style='color: var(--musgo-primary-color); font-weight:bold;'>#11AB00</span>."</p>
-          <footer>— <cite>A Musgo User</cite></footer>
-      </blockquote>
-      <hr>
-    </section>
+  <div data-musgo-container class="hero">
+    <h2>Why Musgo?</h2>
+    <ul>
+      <li>No classes required for beautiful base styling</li>
+      <li>Responsive 12-column grid using block values</li>
+      <li>Dark mode support with simple attribute</li>
+      <li>Accessible, minimal, fast</li>
+    </ul>
+  </div>
 
-    <section class="demo-section">
-      <h2>Lists</h2>
-      <h3>Unordered List</h3>
-      <ul>
-          <li>Item 1</li>
-          <li>Item 2
-              <ul>
-                  <li>Nested Item 2.1</li>
-                  <li>Nested Item 2.2</li>
-              </ul>
-          </li>
-          <li>Item 3</li>
-      </ul>
-      <h3>Ordered List</h3>
-      <ol>
-          <li>First item</li>
-          <li>Second item
-              <ol>
-                  <li>Nested First</li>
-                  <li>Nested Second</li>
-              </ol>
-          </li>
-          <li>Third item</li>
-      </ol>
-      <h3>Description List</h3>
-      <dl>
-          <dt>Musgo</dt>
-          <dd>A classless, minimalistic CSS framework.</dd>
-          <dt>Primary Color</dt>
-          <dd style="color: var(--musgo-primary-color);">#11AB00 (Green)</dd>
-          <dt>Goal</dt>
-          <dd>Simplicity and semantic HTML, now with CSS Variables!</dd>
-      </dl>
-    </section>
+  <div data-musgo-container class="grid-example">
+    <h2>Grid Demo</h2>
+    <div data-musgo-row>
+      <div data-musgo-block="2" class="demo-block">Block 2 (3 columns)</div>
+      <div data-musgo-block="3" class="demo-block">Block 3 (6 columns)</div>
+      <div data-musgo-block="2" class="demo-block">Block 2 (3 columns)</div>
+    </div>
+  </div>
 
-    <section class="demo-section">
-      <h2>Forms</h2>
-      <form onsubmit="return false;">
-        <fieldset>
-            <legend>Personal Information</legend>
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name">
-            </div>
-            <div>
-                <label for="email">Email (required, invalid example):</label>
-                <input type="email" id="email" name="email" required aria-invalid="true" value="notanemail@example">
-            </div>
-              <div>
-                <label for="email-valid">Email (valid example):</label>
-                <input type="email" id="email-valid" name="email-valid" placeholder="your@email.com">
-            </div>
-            <div>
-                <label for="size">Input Size (data-size):</label>
-                <input type="text" id="size" name="size" placeholder="Large input" data-size="large">
-                <input type="text" id="size-small" name="size-small" placeholder="Small input" data-size="small">
-            </div>
-        </fieldset>
+  <div data-musgo-container id="get-started">
+    <h2>Get Started</h2>
+    <pre><code>&lt;link rel="stylesheet" href="css/musgo.css"&gt;
+&lt;link rel="stylesheet" href="css/musgo-block-grid.css"&gt;</code></pre>
 
-        <fieldset>
-            <legend>Options</legend>
-            <div>
-                <label for="options">Choose an option:</label>
-                <select id="options" name="options">
-                    <option value="1">Option 1 (Green flavored)</option>
-                    <option value="2">Option 2 (Also Green)</option>
-                    <option value="3">Option 3 (Still Green)</option>
-                </select>
-            </div>
-            <div>
-                <label>
-                    <input type="checkbox" name="agree" value="yes" checked> I agree to the terms.
-                </label>
-            </div>
-            <div>
-                <p>Choose one:</p>
-                <label style="display:inline-flex; align-items: center; margin-right: 1em;"> <input type="radio" name="choice" value="a"> Choice A
-                </label>
-                <label style="display:inline-flex; align-items: center;">
-                    <input type="radio" name="choice" value="b" checked> Choice B </label>
-            </div>
-        </fieldset>
+    <p>Start building by writing semantic HTML — no classes needed!</p>
 
-        <fieldset>
-            <legend>Text Area</legend>
-            <div>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
-            </div>
-            <div>
-                <label for="disabled-input">Disabled Input:</label>
-                <input type="text" id="disabled-input" name="disabled-input" value="Can't touch this" disabled>
-            </div>
-              <div>
-                <label for="disabled-select">Disabled Select:</label>
-                <select id="disabled-select" name="disabled-select" disabled>
-                    <option>You can't choose</option>
-                </select>
-            </div>
-        </fieldset>
-
-        <div>
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
-            <button type="button" data-variant="outline">Outline Button</button>
-            <button type="button" disabled>Disabled Button</button>
-        </div>
-        <div style="margin-top: 0.5em;">
-            <button type="button" data-size="small">Small Button</button>
-            <button type="button" data-size="large">Large Button</button>
-            <button type="button" data-variant="outline" data-size="small">Small Outline</button>
-            <button type="button" data-variant="outline" data-size="large">Large Outline</button>
-        </div>
-      </form>
-    </section>
-
-    <section class="demo-section">
-      <h2>Tables</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Header 1 (Green Theme)</th>
-            <th>Header 2</th>
-            <th>Header 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Data A1</td>
-            <td>Data B1</td>
-            <td>Data C1</td>
-          </tr>
-          <tr>
-            <td>Data A2</td>
-            <td>Data B2</td>
-            <td>Data C2</td>
-          </tr>
-          <tr>
-            <td>Data A3</td>
-            <td>Data B3</td>
-            <td>Data C3</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="demo-section">
-      <h2>Interactive Elements</h2>
-      <details>
-        <summary>Click to expand/collapse (Details Element)</summary>
-        <p>This is the content hidden inside the details element. It can be any HTML content. Musgo styles it minimally, and it now respects the theme variables!</p>
-      </details>
-      <details open style="margin-top:1em;"> <summary>This one is open by default</summary>
-        <p>Content is visible immediately. The colors should adapt to the current theme (light or dark).</p>
-      </details>
-    </section>
-
-    <section class="demo-section">
-      <h2>Image</h2>
-      <figure>
-          <img src="https://placehold.co/600x300/11AB00/white?text=Musgo+Green" alt="Placeholder image with new primary color"
-                onerror="this.onerror=null;this.src='[https://placehold.co/600x300/cccccc/333333?text=Image+Error](https://placehold.co/600x300/cccccc/333333?text=Image+Error)';">
-          <figcaption>A placeholder image demonstrating the new primary color.</figcaption>
-      </figure>
-    </section>
-  </main>
+    <pre><code>&lt;div data-musgo-container&gt;
+  &lt;div data-musgo-row&gt;
+    &lt;div data-musgo-block="2"&gt;Block 2&lt;/div&gt;
+    &lt;div data-musgo-block="3"&gt;Block 3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Your Name/Project. Musgo CSS (v0.0.2)!</p>
+    <p>Made with 💚 by <a href="https://github.com/uminocelo">uminocelo</a>. MIT Licensed.</p>
+    <p><a href="https://github.com/uminocelo/musgo">View on GitHub</a></p>
   </footer>
 
-  <script>
-    const themeToggle = document.getElementById('themeToggle');
-    const body = document.body;
-    function applyTheme(theme) {
-      body.setAttribute('data-theme', theme);
-    }
-
-    themeToggle.addEventListener('change', function() {
-      applyTheme(this.value);
-    });
-
-    const savedTheme = localStorage.getItem('musgo-theme');
-    if (savedTheme) {
-      body.setAttribute('data-theme', savedTheme);
-      themeToggle.value = savedTheme;
-    } else {
-      const initialTheme = body.getAttribute('data-theme') || 'light';
-      themeToggle.value = initialTheme;
-    }
-  </script>
 </body>
 </html>

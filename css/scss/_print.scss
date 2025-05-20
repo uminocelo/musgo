@@ -1,0 +1,70 @@
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+
+  a,
+  a:visited {
+    color: black !important;
+    text-decoration: underline;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  table {
+    border-collapse: collapse !important;
+    page-break-inside: avoid;
+  }
+
+  th,
+  td {
+    border: 1px solid #333 !important;
+    padding: 0.4em !important;
+  }
+
+  img,
+  video,
+  svg {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Hide navigation, footers, sidebars, etc. */
+  nav,
+  aside,
+  footer,
+  .no-print,
+  [aria-hidden="true"] {
+    display: none !important;
+  }
+
+  /* Ensure rows don't break awkwardly */
+  [data-musgo-row] {
+    page-break-inside: avoid;
+  }
+}

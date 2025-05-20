@@ -66,6 +66,36 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+[data-theme=dark] {
+  --musgo-primary-color: #11AB00;
+  --musgo-primary-hover-color: #15cc00;
+  --musgo-primary-text-color: #ffffff;
+  --musgo-text-color: #B7E5B2;
+  --musgo-blockquote-text-color: #d1f3ce;
+  --musgo-code-text-color: #B7E5B2;
+  --musgo-legend-text-color: #d1f3ce;
+  --musgo-bg-color: #000000;
+  --musgo-secondary-bg-color: #0a1f08;
+  --musgo-tertiary-bg-color: #0f2e0c;
+  --musgo-border-color: #385e34;
+  --musgo-strong-border-color: #4a7d45;
+  --musgo-pre-border-color: var(--musgo-border-color);
+  --musgo-blockquote-border-color: var(--musgo-border-color);
+  --musgo-table-border-color: var(--musgo-border-color);
+  --musgo-details-border-color: var(--musgo-border-color);
+  --musgo-link-color: var(--musgo-primary-color);
+  --musgo-link-hover-color: var(--musgo-primary-hover-color);
+  --musgo-form-bg-color: var(--musgo-secondary-bg-color);
+  --musgo-form-text-color: var(--musgo-text-color);
+  --musgo-form-border-color: #B7E5B2;
+  --musgo-form-focus-border-color: var(--musgo-primary-color);
+  --musgo-primary-color-alpha: rgba(17, 171, 0, 0.35);
+  --musgo-form-disabled-bg-color: #2a2a2a;
+  --musgo-form-disabled-text-color: #6c757d;
+  --musgo-form-disabled-border-color: #444;
+  --musgo-button-outline-hover-text-color: #000000;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 1.5em;
   margin-bottom: 0.5em;
@@ -418,34 +448,65 @@ details[open] > summary {
   margin-bottom: 0.75em;
 }
 
-[data-theme=dark] {
-  --musgo-primary-color: #11AB00;
-  --musgo-primary-hover-color: #15cc00;
-  --musgo-primary-text-color: #ffffff;
-  --musgo-text-color: #B7E5B2;
-  --musgo-blockquote-text-color: #d1f3ce;
-  --musgo-code-text-color: #B7E5B2;
-  --musgo-legend-text-color: #d1f3ce;
-  --musgo-bg-color: #000000;
-  --musgo-secondary-bg-color: #0a1f08;
-  --musgo-tertiary-bg-color: #0f2e0c;
-  --musgo-border-color: #385e34;
-  --musgo-strong-border-color: #4a7d45;
-  --musgo-pre-border-color: var(--musgo-border-color);
-  --musgo-blockquote-border-color: var(--musgo-border-color);
-  --musgo-table-border-color: var(--musgo-border-color);
-  --musgo-details-border-color: var(--musgo-border-color);
-  --musgo-link-color: var(--musgo-primary-color);
-  --musgo-link-hover-color: var(--musgo-primary-hover-color);
-  --musgo-form-bg-color: var(--musgo-secondary-bg-color);
-  --musgo-form-text-color: var(--musgo-text-color);
-  --musgo-form-border-color: #B7E5B2;
-  --musgo-form-focus-border-color: var(--musgo-primary-color);
-  --musgo-primary-color-alpha: rgba(17, 171, 0, 0.35);
-  --musgo-form-disabled-bg-color: #2a2a2a;
-  --musgo-form-disabled-text-color: #6c757d;
-  --musgo-form-disabled-border-color: #444;
-  --musgo-button-outline-hover-text-color: #000000;
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  a,
+  a:visited {
+    color: black !important;
+    text-decoration: underline;
+  }
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  table {
+    border-collapse: collapse !important;
+    page-break-inside: avoid;
+  }
+  th,
+  td {
+    border: 1px solid #333 !important;
+    padding: 0.4em !important;
+  }
+  img,
+  video,
+  svg {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+  /* Hide navigation, footers, sidebars, etc. */
+  nav,
+  aside,
+  footer,
+  .no-print,
+  [aria-hidden=true] {
+    display: none !important;
+  }
+  /* Ensure rows don't break awkwardly */
+  [data-musgo-row] {
+    page-break-inside: avoid;
+  }
 }
 
 /*# sourceMappingURL=musgo.css.map */
