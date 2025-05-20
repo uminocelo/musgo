@@ -1,0 +1,116 @@
+/* Media */
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Figure */
+figure {
+  margin: 0 0 1em;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: var(--musgo-blockquote-text-color);
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+/* Horizontal Rule */
+hr {
+  border: 0;
+  border-top: 1px solid var(--musgo-border-color);
+  margin: 2em 0;
+}
+
+/* Lists */
+ul,
+ol {
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+/* Definition Lists */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 2em;
+  margin-bottom: 0.5em;
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 1em 0 1em 2em;
+  padding-left: 1em;
+  border-left: 3px solid var(--musgo-blockquote-border-color);
+  color: var(--musgo-blockquote-text-color);
+}
+
+/* Code & Pre */
+code,
+kbd,
+samp {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9em;
+  background-color: var(--musgo-secondary-bg-color);
+  color: var(--musgo-code-text-color);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  border: 1px solid var(--musgo-pre-border-color);
+}
+
+pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9em;
+  background-color: var(--musgo-secondary-bg-color);
+  color: var(--musgo-code-text-color);
+  padding: 1em;
+  overflow-x: auto;
+  border: 1px solid var(--musgo-pre-border-color);
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+pre code {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Details/Summary */
+details {
+  background-color: var(--musgo-secondary-bg-color);
+  border: 1px solid var(--musgo-details-border-color);
+  border-radius: 4px;
+  padding: 0.75em;
+  margin-bottom: 1em;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5em;
+  margin: -0.75em -0.75em 0;
+  color: var(--musgo-text-color);
+}
+
+summary:hover {
+  color: var(--musgo-link-hover-color);
+}
+
+details[open] > summary {
+  margin-bottom: 0.75em;
+}

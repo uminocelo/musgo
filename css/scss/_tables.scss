@@ -1,0 +1,24 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  border: 1px solid var(--musgo-table-border-color);
+}
+
+th,
+td {
+  padding: 0.75em;
+  text-align: left;
+  border: 1px solid var(--musgo-table-border-color);
+}
+
+thead th {
+  background-color: var(--musgo-table-header-bg-color);
+  font-weight: bold;
+  vertical-align: bottom;
+  border-bottom: 2px solid var(--musgo-table-border-color);
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: var(--musgo-table-even-row-bg-color);
+}

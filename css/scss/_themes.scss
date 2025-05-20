@@ -1,0 +1,29 @@
+[data-theme="dark"] {
+  --musgo-primary-color: #11AB00;
+  --musgo-primary-hover-color: #15cc00;
+  --musgo-primary-text-color: #ffffff;
+  --musgo-text-color: #B7E5B2;
+  --musgo-blockquote-text-color: #d1f3ce;
+  --musgo-code-text-color: #B7E5B2;
+  --musgo-legend-text-color: #d1f3ce;
+  --musgo-bg-color: #000000;
+  --musgo-secondary-bg-color: #0a1f08;
+  --musgo-tertiary-bg-color: #0f2e0c;
+  --musgo-border-color: #385e34;
+  --musgo-strong-border-color: #4a7d45;
+  --musgo-pre-border-color: var(--musgo-border-color);
+  --musgo-blockquote-border-color: var(--musgo-border-color);
+  --musgo-table-border-color: var(--musgo-border-color);
+  --musgo-details-border-color: var(--musgo-border-color);
+  --musgo-link-color: var(--musgo-primary-color);
+  --musgo-link-hover-color: var(--musgo-primary-hover-color);
+  --musgo-form-bg-color: var(--musgo-secondary-bg-color);
+  --musgo-form-text-color: var(--musgo-text-color);
+  --musgo-form-border-color: #B7E5B2;
+  --musgo-form-focus-border-color: var(--musgo-primary-color);
+  --musgo-primary-color-alpha: rgba(17, 171, 0, 0.35);
+  --musgo-form-disabled-bg-color: #2a2a2a;
+  --musgo-form-disabled-text-color: #6c757d;
+  --musgo-form-disabled-border-color: #444;
+  --musgo-button-outline-hover-text-color: #000000;
+}
