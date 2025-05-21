@@ -6,8 +6,12 @@ Welcome to **Musgo**, a classless CSS framework designed for clarity, accessibil
 
 ## 📦 Installation
 
-### CDN (Coming soon)
-_(If you publish to jsDelivr or UNPKG, document that here)_
+### CDN
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/uminocelo/musgo@main/dist/musgo.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/uminocelo/musgo@main/dist/musgo-block-grid.css">
+```
 
 ### Local
 
